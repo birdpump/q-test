@@ -36,8 +36,9 @@ function calcGrades() {
         var ptsPossible = cells[4].textContent.trim();
         var score = cells[5].textContent.trim();
 
-        total1 += parseFloat(ptsPossible);
-        total2 += parseFloat(score);
+        ptsPossible = ptsPossible !== "" ? parseFloat(ptsPossible) : 0;
+        score = score !== "" ? parseFloat(score) : 0;
+
         // Push the values into the arrays
         ptsPossibleValues.push(ptsPossible);
         scoreValues.push(score);
