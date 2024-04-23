@@ -60,7 +60,7 @@ function calcGrades() {
     console.log(total1);
     console.log(total2);
 
-    let score = (total1/total2)*100;
-    console.log(score);
+    let finalscore = (total1/total2)*100;
+    console.log(finalscore.toFixed(2));
 
 }
