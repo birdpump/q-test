@@ -25,8 +25,10 @@ function calcGrades() {
     var ptsPossibleValues = [];
     var scoreValues = [];
 
+    let total1 = 0;
+    let total2 = 0;
     // Iterate over the rows in the table, starting from the second row (skipping the header row)
-    for (var i = 1; i < table.rows.length; i++) {
+    for (var i = 2; i < table.rows.length; i++) {
         // Get the cells in the current row
         var cells = table.rows[i].cells;
 
@@ -34,6 +36,8 @@ function calcGrades() {
         var ptsPossible = cells[4].textContent.trim();
         var score = cells[5].textContent.trim();
 
+        total1 += ptsPossible;
+        total2 += score;
         // Push the values into the arrays
         ptsPossibleValues.push(ptsPossible);
         scoreValues.push(score);
@@ -42,5 +46,9 @@ function calcGrades() {
     // Output the arrays containing PTS possible and score values
     console.log("PTS Possible Values:", ptsPossibleValues);
     console.log("Score Values:", scoreValues);
+
+
+    console.log(total1);
+    console.log(total2);
 
 }
